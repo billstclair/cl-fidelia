@@ -1,0 +1,25 @@
+cl-fidelia is a simple now-playing interface to the Audiofile
+Engineering Macintosh music player application, Fidelia. I built it by
+reverse engineering the TCP stream between their iPhone app and the
+Macintosh app. It enables scripts to read the song now playing.
+
+  http://www.audiofile-engineering.com/fidelia/
+
+I have written a "/np" script for the Linkinus IRC client.
+
+In order to use it with Linkinus without changing any of the scripts,
+you need to have Clozure Common Lisp installed with an executable
+available on the system PATH (e.g. in /usr/bin/). Then download the
+code:
+
+  mkdir -p ~/lisp
+  cd lisp
+  git clone git://github.com/billstclair/cl-fidelia.git
+
+Copy cl-fidelia/linkinus/np.scpt to:
+
+  ~/Library/Application Support/Linkinus 2/Scripts/
+
+Now "/np" in Linkinus should display the tune you're currently
+listening to in Fedelia.
+

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ccl -R 200M -e '(load "start")'
